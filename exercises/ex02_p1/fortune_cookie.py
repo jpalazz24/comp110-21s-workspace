@@ -14,6 +14,7 @@ def main() -> None:
 
 # TODO 1: Define your fortune_cookie function here.
 def fortune_cookie() -> str:
+    """Random fortune function call."""
     your_fortune: int = randint(1, 100)
     if your_fortune < 50:
         if your_fortune < 25:
