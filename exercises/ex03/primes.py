@@ -17,20 +17,23 @@ def is_prime(number: int) -> bool:
     """A function determining if a number is prime or not."""
     i: int = 2
     answer: bool = True
-    while i < number:
-        if number % i != 0:
-            i += 1
-        else:
-            answer = False
-            i += 1   
+    if number > 1:
+        while i < number:
+            if number % i != 0:
+                i += 1
+            else:
+                answer = False
+                i += 1
+    else:
+        answer = False   
     return answer
 
 
 def list_primes(x: int, y: int) -> list[int]:
     """Function to return prime numbers between parameters."""
-    list: list[int] = []
+    list = []
     while x < y:
-        if x > 1 and is_prime(x) == True:
+        if is_prime(x):
             list.append(x)
         x += 1
     return list

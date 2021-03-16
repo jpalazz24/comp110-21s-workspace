@@ -18,9 +18,8 @@ def palindromify(word: str, length: bool) -> str:
     i: int = 0
     palindrome: str = ""
     last_letter: int = 1
-    last_letter_odd: int = 2
     while i < len(word):
-        if length == True:
+        if length:
             palindrome += word[len(word) - last_letter]
         else:
             while i < (len(word) - 1):
@@ -31,7 +30,6 @@ def palindromify(word: str, length: bool) -> str:
         i += 1
     return word + palindrome
             
-
 
 if __name__ == "__main__":
     main()

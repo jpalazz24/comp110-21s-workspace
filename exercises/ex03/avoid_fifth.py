@@ -17,7 +17,7 @@ def avoid_fifth(word: str) -> str:
     no_e: str = ""
     while i < len(word): 
         if word[i] != "e" and word[i] != "E":
-                no_e += word[i]
+            no_e += word[i]
         i += 1
     return no_e
 
