@@ -19,6 +19,7 @@ file_handle.close()
 # Let's calculate the average high temp
 # Process the table by a specific column
 high_temps: list[float] = []
+print(table)
 for row in table:
     high_temps.append(float(row["high"]))
 print("The average high temp was: ")
